@@ -1,0 +1,21 @@
+<launch>
+    <!-- launch kinect azure -->
+    <include file="$(find azure_kinect_ros_driver)/launch/driver.launch">
+        <arg name="depth_mode" value="WFOV_2X2BINNED"/>
+        <arg name="body_tracking_enabled" value="true"/>
+        <arg name="color_enabled" value="true"/>
+        <arg name="overwrite_robot_description" value="false"/>
+    </include>
+
+    <!-- bring up the robot -->
+    <include file="$(find shutter_bringup)/launch/shutter_with_face.launch">
+    </include>
+
+    <!-- activate hand tracking -->
+    <node name="hand_tracking" pkg="hand-gesture-recognition-mediapipe-main" type="hand_tracking.py" output="screen">
+        <param name="project_path" value="$(find hand-gesture-recognition-mediapipe-main)"/>
+    </node>
+
+    <!-- visualize the moving object in rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hand-gesture-recognition-mediapipe-main)/config/gesture_images.rviz"/>
+</launch>
