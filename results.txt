@@ -1,0 +1,48 @@
+Classification Report old with webcam
+              precision    recall  f1-score   support
+
+           0       1.00      0.99      0.99       510
+           1       0.99      1.00      1.00       638
+           2       1.00      0.97      0.99       485
+           3       0.98      1.00      0.99       528
+           4       0.97      1.00      0.98       294
+           5       1.00      1.00      1.00       143
+           6       0.99      1.00      1.00       223
+           7       1.00      0.98      0.99       161
+
+    accuracy                           0.99      2982
+   macro avg       0.99      0.99      0.99      2982
+weighted avg       0.99      0.99      0.99      2982
+
+
+
+Classification Report with anna
+              precision    recall  f1-score   support
+
+           1       0.96      0.77      0.85       349
+           2       0.60      0.86      0.71       120
+           3       1.00      0.98      0.99       505
+           4       0.94      0.99      0.97       447
+           5       0.99      1.00      1.00       588
+           6       0.98      0.99      0.99       500
+           7       0.99      1.00      0.99       471
+
+    accuracy                           0.96      2980
+   macro avg       0.92      0.94      0.93      2980
+weighted avg       0.97      0.96      0.96      2980
+
+
+Classification Report with all three people
+              precision    recall  f1-score   support
+
+           1       0.93      0.97      0.95      1325
+           2       0.00      0.00      0.00       106
+           3       0.96      0.92      0.94      1354
+           4       0.95      0.99      0.97      1291
+           5       0.98      1.00      0.99      1229
+           6       0.97      0.97      0.97      1499
+           7       0.94      0.97      0.95      1372
+
+    accuracy                           0.95      8176
+   macro avg       0.82      0.83      0.82      8176
+weighted avg       0.94      0.95      0.95      8176

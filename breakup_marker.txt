@@ -1,0 +1,47 @@
+# the header is identical across all markers; may be useful for transform
+# id is necessary for (i) who and (ii) joint
+
+
+# ns, type, action are not used
+
+# depth_camera_link to camera_body is known
+- camera_body: x is pointing forwards (towards subject), y is pointing towards bim7, z is pointing upwards
+
+header: 
+    seq: 0
+    stamp: 
+    secs: 1668478968
+    nsecs: 698539178
+    frame_id: "depth_camera_link"
+ns: ''
+id: 226
+type: 2
+action: 0
+pose: 
+    position: 
+    x: -0.4727446436882019
+    y: 0.1748616099357605
+    z: 0.47849005460739136
+    orientation: 
+    x: -0.2511739432811737
+    y: 0.6935932636260986
+    z: -0.278115838766098
+    w: 0.6152166128158569
+scale: 
+    x: 0.05
+    y: 0.05
+    z: 0.05
+color: 
+    r: 0.0
+    g: 0.0
+    b: 1.0
+    a: 1.0
+lifetime: 
+    secs: 0
+    nsecs: 250000000
+frame_locked: False
+points: []
+colors: []
+text: ''
+mesh_resource: ''
+mesh_use_embedded_materials: False

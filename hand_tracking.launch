@@ -1,0 +1,21 @@
+<launch>
+
+    <!-- make shutter look forward? -->
+    <!-- bring up the robot -->
+    <include file="$(find shutter_bringup)/launch/shutter_with_face.launch">
+    </include>
+
+    <!-- generate the simulated moving object -->
+    <node name="generate_target" pkg="hand-gesture-recognition-mediapipe-main" type="hand_tracking.py" output="screen">
+    </node>
+    
+    <!-- visualize the moving object in rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find shutter_lookat)/config/rviz_target.cfg.rviz"/>
+
+    <!-- look forward if desired -->
+    <group if="$(arg look_forward)">
+        <node name="look_forward" pkg="shutter_lookat" type="look_forward.py"/>
+    </group>
+
+
+</launch>
